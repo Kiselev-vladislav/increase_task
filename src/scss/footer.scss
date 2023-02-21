@@ -1,0 +1,163 @@
+// .footer {
+//     padding-top: 20px;
+//     border-top: 1px solid $main-color;
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+//     gap:30px;
+//     color: white;
+
+
+//     &__block {
+//         padding: 20px;
+//         min-width: 223px;
+//         &--2colums {
+//             column-count: 2;
+//             gap: 1px;
+//         }
+//         &--2rows {
+//             display: flex;
+//             flex-direction: column;
+//             gap: 20px;
+//             height: 100%;
+//             grid-column: 1/1;
+            
+//             div{
+//                 height: 90px;
+//             }
+//         }
+//     }
+
+
+// }
+
+// .footer {
+//     grid-column: 2/2 ;
+//     grid-row: 2/2;
+// }
+
+
+.list__item--square {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.marker--square {
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    position: relative;
+    margin-right: 7px;
+}
+
+
+// .a {
+//     height: 50%;
+// }
+    
+.footer {
+    display:  grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $main-color;
+    color: white;
+
+    &__block {
+        min-width: 223px;
+        padding: 20px;
+        flex: 1;
+
+
+        &--2rows{
+            display: flex;
+            flex-direction:column ;
+            gap: 20px;
+            padding: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $content-color;
+        }
+    }
+}
+
+.footer__menu {
+    display: flex;
+    gap: 20px;
+    height: max-content;
+}
+
+
+.block--mini {
+    height: 50%;
+    width: 100%;
+}
+
+
+
+.list--2colums{
+    display: block;
+    columns: 2;
+    width: max-content;
+    gap: 100px;
+}
+
+
+@media (max-width: 905px) {
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__block--2rows {
+            flex-direction: row;
+            height: fit-content;
+        }
+
+        &__menu {
+            width: 100%;
+        }
+    }
+    .block--mini {
+        height: 97px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer {
+        flex-direction: column;
+        &__block{
+            flex: none;
+        }
+
+        &__menu{
+            flex-direction: column;
+        }
+
+        &__block {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .list--2colums{
+        gap: 100px;
+        columns: 2;
+    }
+
+    .list--center {
+        margin: 0 auto;
+
+    }
+
+}
+

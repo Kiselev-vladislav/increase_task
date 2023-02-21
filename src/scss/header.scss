@@ -1,0 +1,60 @@
+.header { 
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 80px 3fr 5fr;
+    justify-items: stretch;
+    column-gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $main-color;
+
+    div, nav{
+        height: 80px;
+
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+    justify-content: center;
+    
+    &__item:hover, a:hover{
+        cursor: pointer;
+        color: $content-color;
+    }
+
+    &__phone {
+        color:white;
+        text-decoration: none;
+    }
+
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    &__item:hover{
+        cursor: pointer;
+        color: $content-color;
+    }
+}
+
+@media (max-width: 720px) {
+    .header {
+        grid-template-areas: "logo contacts"
+                                "menu menu";
+        grid-template-columns: 80px;
+        gap: 20px;
+    }
+    .header > .logo {grid-area:logo;}
+    .header> .contacts {grid-area: contacts;}
+    .header > .menu {grid-area: menu ;}
+}
+
+

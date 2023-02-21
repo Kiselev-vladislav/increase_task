@@ -1,0 +1,89 @@
+
+// Position
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 150px auto;
+    column-gap: 20px;
+    margin-top: 20px;
+}
+
+// Left Content
+
+.left-content{
+    padding: 10px;
+    height: fit-content;
+}
+
+
+// Right Content
+
+
+
+.description {
+    padding: 30px;
+}
+
+.list {
+    &__item--disc {
+        list-style-type: disc;
+    }
+
+    &--center {
+        width: fit-content;
+        margin: 30px auto;
+    }
+}
+
+
+// Gallery
+
+.gallery{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min(150px));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    
+    justify-content: space-between;
+
+    
+
+    &__item{
+        width: 150px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 720px) {
+    .gallery {
+        justify-content: center;
+    }
+}
+
+// Reviews
+
+.reviews {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.review {
+    min-height: 200px;
+
+    &__text {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 720px) {
+    .reviews {
+        flex-direction: column;
+    }
+
+    .review {
+        min-height: auto;
+    }
+}
